@@ -38,15 +38,18 @@ $calculateTrigger.addEventListener('click', calculateAll);
 
 // ITERATION 4
 
-function addProductRemoveListener($removeButton) {
-  let = $removebutton = document.getElementsByClassName('btn-remove');
-  for (let i = 0; i < $removebutton.length; i++) {
 
-    $removebutton[i].addEventListener('click', a => {
-      event.currentTarget.parentNode.parentNode.remove();
-    })
-  }
+function addProductRemoveListener($removeButton) {
+  event.currentTarget.parentNode.parentNode.remove();
 }
+let $removeButton = document.getElementsByClassName('btn-remove');
+for (let i=0; i<$removeButton.length; i++){
+  $removeButton[i].addEventListener('click', event => {
+    addProductRemoveListener();
+    calculateAll();
+  });
+};
+
 // ITERATION 5
 
 function createProduct(event) {
